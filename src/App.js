@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import './components/Footer.css'
+import React from 'react';
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
+import RootLayout from "./components/RootLayout";
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
+import TopManga from "./pages/TopManga";
+import Bookmarks from "./pages/Bookmarks";
+import TermsOfUse from "./pages/footer_pages/Terms-of-use";
+
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path={"/"} element={<RootLayout />}>
+			<Route index element={<Home />} />
+			<Route path={"manga"} element={<Catalog />} />
+			<Route path={"manga/top"} element={<TopManga />} />
+			<Route path={"user/bookmarks"} element={<Bookmarks />} />
+			<Route path={"terms-of-use"} element={<TermsOfUse />} />
+		</Route>
+	)
+)
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<RouterProvider router={router} />
+	);
 }
 
 export default App;
