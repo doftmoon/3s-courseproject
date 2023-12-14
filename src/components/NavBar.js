@@ -4,7 +4,7 @@ class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isDarkTheme: true
+			isDarkTheme: true,
 		};
 	}
 
@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
 	toggleTheme = () => {
 		this.setState(prevState => ({
-			isDarkTheme: !prevState.isDarkTheme
+			isDarkTheme: !prevState.isDarkTheme,
 		}), this.updateThemeAttributes);
 	};
 
@@ -51,14 +51,14 @@ class NavBar extends React.Component {
 							</svg>
 						</span>
 					</NavLink>
-					<div style={{maxWidth:300, marginLeft:16}} className={"Header_navContainer"}>
-						<NavLink className={"Header_link Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/manga">
+					<div style={{maxWidth:300, marginLeft:16}} className={"Header_navContainer hidden-smDown"}>
+						<NavLink className={"Header_link Button Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/manga">
 							<span className={"Button_label"}>Catalog</span>
 						</NavLink>
-						<NavLink className={"Header_link Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/manga/top">
+						<NavLink className={"Header_link Button Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/manga/top">
 							<span className={"Button_label"}>Tops</span>
 						</NavLink>
-						<NavLink className={"Header_link Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/search">
+						<NavLink className={"Header_link Button Button Button_text"} tabIndex={0} role={"button"} type={"button"} to="/search">
 							<span className={"Button_label"}>
 								<svg style={{marginLeft:-2, marginRight:6}} className={"SvgIcon_root SvgIcon_fontSize-small"} focusable={"false"} viewBox={"0 0 24 24"} aria-hidden={"true"}>
 									<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
@@ -71,9 +71,12 @@ class NavBar extends React.Component {
 				<div className={"Header_navContainer"} />
 				<div className={"Header_navContainer justify-end"}>
 					<div className={"Header_navContainer"}>
-						<NavLink className={"Header_link Button"} tabIndex={0} role={"button"} to="/user/bookmarks">Bookmarks</NavLink>
+						<NavLink className={"Header_link Button Button"} tabIndex={0} role={"button"} to="/user/bookmarks">Bookmarks</NavLink>
 						<span className={"ToggleTheme_root"}>
-							<span className={"SwitchBase_root ToggleTheme_switchBase"}>
+							<span className={"SwitchBase_root ToggleTheme_switchBase"} className={`ToggleTheme_switchBase ${isDarkTheme ? 'ToggleTheme_checked' : ''}`}
+							      style={{
+								      transform: isDarkTheme ? 'translateX(22px)' : 'none',
+							      }}>
 								<span className={"SwitchBase_label"}>
 									<input className={"SwitchBase_input ToggleTheme_input"} type={"checkbox"} value={""} checked={isDarkTheme} onChange={this.toggleTheme}/>
 									<span className={"ToggleTheme_thumb"}></span>
@@ -89,14 +92,14 @@ class NavBar extends React.Component {
 							</span>
 						</span>
 					</div>
-					<button className={"Button Button_text Button_text-primary Preference_button"} tabIndex={0} type={"button"}>
+					<button className={"Button Button Button_text Button_text-primary Preference_button"} tabIndex={0} type={"button"}>
 						<span className={"Button_label"}>
 							<svg className={"SvgIcon_root"} focusable={"false"} viewBox={"0 0 24 24"} aria-hidden={"true"} aria-label={"Preferences"}>
 								<path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"></path>
 							</svg>
 						</span>
 					</button>
-					<button className={"Button Button_contained Button_contained-primary hidden-xsDown"} tabIndex={0} type={"button"} style={{marginLeft:8}}>
+					<button className={"Button Button Button_contained Button_contained-primary hidden-xsDown"} tabIndex={0} type={"button"} style={{marginLeft:8}}>
 						<span className={"Button_label"}>Log In</span>
 					</button>
 					<div></div>

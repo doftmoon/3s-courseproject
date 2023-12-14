@@ -1,0 +1,158 @@
+.Home_mobileNav {
+	width: 100%;
+	background: var(--primary);
+	padding: 5px 0 4px;
+	color: #fff;
+	margin-bottom: 0;
+}
+
+div.Home {
+	width: 100%;
+	flex: 1;
+}
+
+@media (min-width: 1024px) {
+	div.Home {
+		max-width: calc(1600px + (100vw/64*7)*2);
+		padding-left: calc(100vw/64*7);
+		padding-right: calc(100vw/64*7);
+	}
+}
+
+@media (min-width: 1440px) {
+	div.Home {
+		max-width: calc(1600px + (100vw/72*9)*2);
+		padding-left: calc(100vw/72*9);
+		padding-right: calc(100vw/72*9);
+	}
+}
+
+@media (min-width: 1440px) {
+	.slim.Home {
+		max-width: calc(1440px + (100vw/72*2)*2);
+		padding-left: calc(100vw/72*7);
+		padding-right: calc(100vw/72*7);
+	}
+}
+
+.Home_header {
+	margin-top: 24px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.Home_title {
+	padding-bottom: 12px;
+	margin: 0 8px;
+}
+
+.Top_tagsRoot {
+	margin: 12px 8px 16px;
+}
+
+.Home_grid {
+	padding: 0 8px;
+}
+
+.grid-container.Home_gridContainer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.grid-container.Home_gridContainer2 {
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: flex-start;
+}
+
+.Home_gridItem {
+	margin: 0;
+	flex-grow: 0;
+	max-width: 100%;
+	flex-basis: 100%;
+}
+
+@media screen and (min-width: 600px) {
+	.grid-item.Home_gridItem {
+		flex-grow: 0;
+		max-width: 100%;
+		flex-basis: 100%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.grid-item.Home_gridItem {
+		flex-grow: 0;
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.grid-item.Home_gridItem {
+		flex-grow: 0;
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.grid-item.Home_gridItem {
+		flex-grow: 0;
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+}
+
+.grid-container.Home_gridContainer2>.grid-item {
+	padding: 8px;
+}
+
+.Horizontal_card {
+	display: flex;
+	position: relative;
+	align-items: center;
+	background: var(--bg-secondary);
+	border-radius: 4px;
+}
+
+.Horizontal_cover {
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	width: 120px;
+	min-width: 120px;
+	height: 180px;
+	padding-top: 0;
+	position: relative;
+	background-color: hsla(0,0%,100%,.03);
+}
+
+.Horizontal_content {
+	margin: 12px 12px 0 20px;
+}
+
+.Horizontal_tag {
+	top: 10px;
+	color: hsla(0,0%,55%,.3);
+	right: 16px;
+	position: absolute;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+span.Home_icon {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 16px;
+	font-size: .775rem;
+	font-weight: 400;
+}
+
+svg.Home_svg {
+	width: 0.8rem;
+	margin-right: 4px;
+}

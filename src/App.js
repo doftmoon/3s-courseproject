@@ -9,6 +9,10 @@ import TopManga from "./pages/TopManga";
 import Bookmarks from "./pages/Bookmarks";
 import TermsOfUse from "./pages/footer_pages/Terms-of-use";
 
+const Omni = () => {
+	return <h1>Omni</h1>
+}
+
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path={"/"} element={<RootLayout />}>
@@ -16,7 +20,8 @@ const router = createBrowserRouter(
 			<Route path={"manga"} element={<Catalog />} />
 			<Route path={"manga/top"} element={<TopManga />} />
 			<Route path={"user/bookmarks"} element={<Bookmarks />} />
-			<Route path={"terms-of-use"} element={<TermsOfUse />} />
+			<Route path={"omni"} element={<Omni />} />
+			<Route path={"footer_template"} element={<TermsOfUse />} />
 		</Route>
 	)
 )

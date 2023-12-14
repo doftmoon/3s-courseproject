@@ -192,10 +192,6 @@ b,strong {
 	}
 }
 
-body::-webkit-backdrop {
-	background-color: #121212
-}
-
 body::backdrop {
 	background-color: #121212
 }
@@ -428,6 +424,10 @@ p {
 
 .mb16 {
 	margin-bottom: 16px
+}
+
+.mb-1 {
+	margin-bottom: 0.25rem;
 }
 
 .ml4 {
@@ -865,10 +865,6 @@ p {
 	flex-grow: 1
 }
 
-.transform {
-	transform: var(--tw-transform)
-}
-
 .cursor-pointer {
 	cursor: pointer
 }
@@ -1271,10 +1267,6 @@ p {
 
 .invert {
 	--tw-invert: invert(100%)
-}
-
-.filter {
-	filter: var(--tw-filter)
 }
 
 .transition {

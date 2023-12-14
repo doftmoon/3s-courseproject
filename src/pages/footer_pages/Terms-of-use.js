@@ -1,3 +1,12 @@
 export default function TermsOfUse() {
-	return <h1>TermsOfUse</h1>
+	return (
+		<div className={"MdView_root"}>
+			<div className={"MdView_container"}>
+				<h1>Test template</h1>
+				<div>
+					<p>enter content</p>
+				</div>
+			</div>
+		</div>
+	)
 }

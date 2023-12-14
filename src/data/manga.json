@@ -1,0 +1,36 @@
+{
+  "manga": [
+    {
+      "id": 41424,
+      "link":"omni",
+      "img": "background-image: src='./assets/omni.jpg'",
+      "type": "Manhwa",
+      "rate": 9.5,
+      "title": "Omni Reader"
+    },
+    {
+      "id": 52252,
+      "link":"noob",
+      "img": "background-image: src='./assets/omni.jpg'",
+      "type": "Manhwa",
+      "rate": 9.2,
+      "title": "Solo-level noob"
+    },
+    {
+      "id": 85543,
+      "link":"omni",
+      "img": "background-image: src='./assets/omni.jpg'",
+      "type": "Manhwa",
+      "rate": 9.5,
+      "title": "Omni Reader"
+    },
+    {
+      "id": 64634,
+      "link":"omni",
+      "img": "background-image: src='./assets/omni.jpg'",
+      "type": "Manhwa",
+      "rate": 9.5,
+      "title": "Omni Reader"
+    }
+  ]
+}
