@@ -5,14 +5,15 @@ import {mangaData} from "../data/manga";
 
 const MangaGrid = ({key, link, img, type, rate, title}) => {
 	const styles = {
-		backgroundImage: `src(${img})`
+		// backgroundImage: `src(${img})`
+		src: `${img}`
 	}
 	return (
 		<div className="Grid_gridItem p-1">
 			<Link className="Vertical_card" title={title} key={key} to={"/manga/" + link}>
 				<div className={"Vertical_wrapper"}>
 					<div className={"Image_container Image_hover rounded-sm Vertical_img Image_imagePlaceholder"}>
-						<div className={"Image_image Image_imgStatic Image_imgFluid"} style={styles}></div>
+						<img className={"Image_image Image_imgStatic Image_imgFluid"} style={styles}></img>
 					</div>
 				</div>
 				<div className={"pr-2 pl-0.5 mb-1"}>
