@@ -24,6 +24,35 @@ main.Main_jsx {
   min-height: unset;
 }
 
+div.SharedFlex {
+  width: 100%;
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  div.SharedFlex {
+    max-width: calc(1600px + (100vw/64*7)*2);
+    padding-left: calc(100vw/64*7);
+    padding-right: calc(100vw/64*7);
+  }
+}
+
+@media (min-width: 1440px) {
+  div.SharedFlex {
+    max-width: calc(1600px + (100vw/72*9)*2);
+    padding-left: calc(100vw/72*9);
+    padding-right: calc(100vw/72*9);
+  }
+}
+
+@media (min-width: 1440px) {
+  .slim.SharedFlex {
+    max-width: calc(1440px + (100vw/72*2)*2);
+    padding-left: calc(100vw/72*7);
+    padding-right: calc(100vw/72*7);
+  }
+}
+
 .Footer {
   width: 100%;
   border-top: var(--border);
@@ -79,16 +108,11 @@ main.Main_jsx {
   outline: 0;
   position: relative;
   align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   vertical-align: middle;
-  -moz-appearance: none;
   justify-content: center;
   text-decoration: none;
   background-color: initial;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
   min-width: auto;
   box-sizing: border-box;
   touch-action: manipulation;
@@ -304,6 +328,12 @@ main.Main_jsx {
   line-height: 1.167;
 }
 
+.Typography_h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.167;
+}
+
 .Typography_h4 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -341,6 +371,9 @@ main.Main_jsx {
   .Typography_h1 {
     font-size: 2.2rem;
   }
+  .Typography_h3 {
+    font-size: 1.5rem;
+  }
   .Typography_h4 {
     font-size: 1.275rem;
   }
@@ -355,6 +388,9 @@ main.Main_jsx {
 @media (min-width: 960px) {
   .Typography_h1 {
     font-size: 2.3rem;
+  }
+  .Typography_h3 {
+    font-size: 1.6rem;
   }
   .Typography_h4 {
     font-size: 1.3rem;
@@ -371,6 +407,9 @@ main.Main_jsx {
   .Typography_h1 {
     font-size: 2.4rem;
   }
+  .Typography_h3 {
+    font-size: 1.8rem;
+  }
   .Typography_h4 {
     font-size: 1.4rem;
   }
@@ -385,6 +424,9 @@ main.Main_jsx {
 @media (min-width: 1440px) {
   .Typography_h1 {
     font-size: 2.5rem;
+  }
+  .Typography_h3 {
+    font-size: 2rem;
   }
   .Typography_h4 {
     font-size: 1.5rem;

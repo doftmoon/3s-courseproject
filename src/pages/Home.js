@@ -3,12 +3,14 @@ import "./Home.css"
 import {mangaData} from "../data/manga";
 import {Link, NavLink} from "react-router-dom";
 
-const MangaGrid = ({key, link, img, type, rate, title, year}) => {
+const MangaGrid = ({key, link, img, type, rate, likes, views, title, year}) => {
+	const imgURL = `url(/images/${img})`
+
 	return (
 		<div className={"Home_gridItem grid-item"}>
-			<Link className={"Horizontal_card"} to={link}>
+			<Link className={"Horizontal_card"} to={`manga/${link}`}>
 				<div className={"Image_container Horizontal_cover Image_imagePlaceholder"}>
-					<img className={"Image_image Image_imgStatic Image_imgFluid"} src={img} alt={""}></img>
+					<div className={"Image_image Image_imgStatic Image_imgFluid"} style={{backgroundImage: imgURL}}></div>
 				</div>
 				<div className={"Horizontal_content"}>
 					<p className={"Typography_body1 Typography_color-textSecondary Typography_lineClamp-1 Typography_lineClamp"}>
@@ -27,13 +29,13 @@ const MangaGrid = ({key, link, img, type, rate, title, year}) => {
 							<svg className="SvgIcon_root Home_svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
 								<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
 							</svg>
-							100
+							{likes}
 						</span>
 						<span className={"Home_icon"}>
 							<svg className="SvgIcon_root Home_svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
 								<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path>
 							</svg>
-							31514
+							{views}
 						</span>
 					</div>
 				</div>
@@ -46,10 +48,12 @@ const Home = () => {
 	const mangaList = mangaData.manga.map((manga, index) => (
 		<MangaGrid
 			key={index}
-			link={manga.link}
+			link={manga.id}
 			img={manga.img}
 			type={manga.type}
 			rate={manga.rate}
+			likes={manga.likes}
+			views={manga.views}
 			title={manga.title}
 			year={manga.year}
 		/>
@@ -73,7 +77,7 @@ const Home = () => {
 							</span>
 				</NavLink>
 			</div>
-			<div className={"Home slim"}>
+			<div className={"SharedFlex slim"}>
 				<div className={"Home_header"}>
 					<h2 className={"Typography_h1 Home_title"}>Home</h2>
 				</div>

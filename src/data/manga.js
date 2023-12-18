@@ -1,9 +1,8 @@
 export const mangaData = {
 	manga: [
 		{
-			id: 65264,
-			link: "manga/omniscient-reader",
-			img: "./assets/omniscient-reader.jpg",
+			id: "omniscient-reader",
+			img: "omniscient-reader.jpg",
 			type: "Manhwa",
 			rate: 9.5,
 			likes: 41414,
@@ -12,9 +11,8 @@ export const mangaData = {
 			year: 2020
 		},
 		{
-			id: 42562,
-			link: "manga/sss-level-hunter",
-			img: "./assets/sss-level-hunter.jpg",
+			id: "sss-level-hunter",
+			img: "sss-level-hunter.jpg",
 			type: "Manhwa",
 			rate: 9.3,
 			likes: 41414,
@@ -23,9 +21,8 @@ export const mangaData = {
 			year: 2019
 		},
 		{
-			id: 63633,
-			link: "manga/solo-max-level-newbie",
-			img: "./assets/solo-max-level-newbie.jpg",
+			id: "solo-max-level-newbie",
+			img: "solo-max-level-newbie.jpg",
 			type: "Manhwa",
 			rate: 9.2,
 			likes: 41414,
@@ -34,9 +31,8 @@ export const mangaData = {
 			year: 2021
 		},
 		{
-			id: 42412,
-			link: "manga/the-greatest-estate-designer",
-			img: "./assets/the-greatest-estate-designer.jpg",
+			id: "the-greatest-estate-designer",
+			img: "the-greatest-estate-designer.jpg",
 			type: "Manhwa",
 			rate: 9.6,
 			likes: 41414,
@@ -45,9 +41,8 @@ export const mangaData = {
 			year: 2021
 		},
 		{
-			id: 53343,
-			link: "manga/nano-machines",
-			img: "./assets/nano-machines.jpg",
+			id: "nano-machines",
+			img: "nano-machines.jpg",
 			type: "Manhwa",
 			rate: 9.3,
 			likes: 41414,
@@ -56,9 +51,8 @@ export const mangaData = {
 			year: 2020
 		},
 		{
-			id: 74624,
-			link: "manga/pick-me",
-			img: "./assets/pick-me.jpg",
+			id: "pick-me",
+			img: "pick-me.jpg",
 			type: "Manhwa",
 			rate: 9.6,
 			likes: 41414,
@@ -67,9 +61,8 @@ export const mangaData = {
 			year: 2022
 		},
 		{
-			id: 74743,
-			link: "manga/fff-class-trashero",
-			img: "./assets/fff-class-trashero.jpg",
+			id: "fff-class-trashero",
+			img: "fff-class-trashero.jpg",
 			type: "Manhwa",
 			rate: 5.6,
 			likes: 41414,
@@ -78,9 +71,8 @@ export const mangaData = {
 			year: 2019
 		},
 		{
-			id: 42424,
-			link: "manga/sweet-home",
-			img: "./assets/sweet-home.jpg",
+			id: "sweet-home",
+			img: "sweet-home.jpg",
 			type: "Manhwa",
 			rate: 9.5,
 			likes: 41414,
@@ -89,9 +81,8 @@ export const mangaData = {
 			year: 2017
 		},
 		{
-			id: 52535,
-			link: "manga/legend-of-the-northern-blade",
-			img: "../assets/legend-of-the-northern-blade.jpg",
+			id: "legend-of-the-northern-blade",
+			img: "legend-of-the-northern-blade.jpg",
 			type: "Manhwa",
 			rate: 9.5,
 			likes: 41414,
@@ -100,9 +91,8 @@ export const mangaData = {
 			year: 2019
 		},
 		{
-			id: 63414,
-			link: "manga/martial-peak",
-			img: "../assets/martial-peak.jpg",
+			id: "martial-peak",
+			img: "martial-peak.jpg",
 			type: "Manhua",
 			rate: 8.5,
 			likes: 41414,
@@ -111,9 +101,8 @@ export const mangaData = {
 			year: 2018
 		},
 		{
-			id: 85356,
-			link: "manga/igret",
-			img: "../assets/igret.jpg",
+			id: "igret",
+			img: "igret.jpg",
 			type: "Manhwa",
 			rate: 8.4,
 			likes: 41414,
@@ -122,9 +111,8 @@ export const mangaData = {
 			year: 2021
 		},
 		{
-			id: 74262,
-			link: "manga/eleceed",
-			img: "../assets/eleceed.jpg",
+			id: "eleceed",
+			img: "eleceed.jpg",
 			type: "Manhwa",
 			rate: 9.5,
 			likes: 41414,
@@ -133,9 +121,8 @@ export const mangaData = {
 			year: 2018
 		},
 		{
-			id: 63353,
-			link: "manga/wind-breaker",
-			img: "../assets/wind-breaker.jpg",
+			id: "wind-breaker",
+			img: "wind-breaker.jpg",
 			type: "Manhwa",
 			rate: 9.5,
 			likes: 41414,
@@ -144,9 +131,8 @@ export const mangaData = {
 			year: 2013
 		},
 		{
-			id: 48523,
-			link: "/manga/evolution_on_another_planet",
-			img: "../assets/evolution-on-another-planet.jpg",
+			id: "evolution_on_another_planet",
+			img: "evolution-on-another-planet.jpg",
 			type: "Manhwa",
 			rate: 3.4,
 			likes: 4224,
@@ -155,9 +141,8 @@ export const mangaData = {
 			year: 2021
 		},
 		{
-			id: 63443,
-			link: "/manga/the-ultimate-of-all-ages",
-			img: "../assets/the-ultimate-of-all-ages.jpg",
+			id: "the-ultimate-of-all-ages",
+			img: "the-ultimate-of-all-ages.jpg",
 			type: "Manhua",
 			rate: 8.3,
 			likes: 41414,

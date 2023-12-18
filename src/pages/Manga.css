@@ -1,0 +1,129 @@
+.root.Manga {
+	max-width: 1320px;
+	width: 100%;
+	padding: 24px 64px;
+	min-height: -webkit-calc(100vh - 64px);
+	min-height: -moz-calc(100vh - 64px);
+	min-height: calc(100vh - 64px);
+}
+
+.grid-container.Manga_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.grid-container.Manga_container {
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: flex-start;
+}
+
+.leftRow.Manga_left {
+	width: 250px;
+}
+
+.root.Manga_leftContainer {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.grid-item.Manga_right {
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	flex-grow: 1;
+	max-width: 100%;
+	flex-basis: 0;
+}
+
+.Manga_header {
+	border-bottom: var(--border);
+	padding: 32px 8px 12px 36px;
+}
+
+.grid-container.Stat_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.grid-container.jsx-3892151905 {
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: center;
+	justify-content: flex-start;
+}
+
+.grid-container.Manga_containerMain {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.grid-container.Manga_containerMain {
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: flex-start;
+}
+
+.grid-item.Manga_desc {
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	flex-grow: 0;
+	max-width: 100%;
+	flex-basis: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+	.grid-item.Manga_desc {
+		flex-grow: 1;
+		max-width: 100%;
+		flex-basis: 0;
+	}
+}
+
+.grid-container.Manga_desc>.grid-item {
+	padding: 20px;
+}
+
+
+.stat.Stat {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 16px;
+	font-size: 16px;
+	vertical-align: middle;
+	line-height: 24px;
+	padding: 8px 6px;
+	color: var(--text-secondary);
+}
+
+
+
+
+
+.Typography_gutterBottom {
+	margin-bottom: 0.35em;
+}
+
+.Buttons.Buttons_container {
+	padding: 8px 4px;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+
+.Button_fullWidth {
+	width: 100%;
+}

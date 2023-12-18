@@ -3,25 +3,28 @@ import "./Catalog.css"
 import {Link} from "react-router-dom";
 import {mangaData} from "../data/manga";
 
-const MangaGrid = ({key, link, img, type, rate, title}) => {
-	const styles = {
-		// backgroundImage: `src(${img})`
-		src: `${img}`
-	}
+const MangaGrid = ({id, img, type, rate, title}) => {
+	const imgURL = `url(/images/${img})`
+
 	return (
 		<div className="Grid_gridItem p-1">
-			<Link className="Vertical_card" title={title} key={key} to={"/manga/" + link}>
+			<Link className="Vertical_card" title={title} key={id} to={id}>
 				<div className={"Vertical_wrapper"}>
 					<div className={"Image_container Image_hover rounded-sm Vertical_img Image_imagePlaceholder"}>
-						<img className={"Image_image Image_imgStatic Image_imgFluid"} style={styles}></img>
+						<div className={"Image_image Image_imgStatic Image_imgFluid"} style={{backgroundImage: imgURL}}></div>
 					</div>
 				</div>
 				<div className={"pr-2 pl-0.5 mb-1"}>
 					<div className={"flex items-center"}>
-						<p className={"Typography_caption Typography_color-textSecondary Typography_lineClamp-1 Typography_lineClamp"}><pre>{type}  </pre></p>
+						<p
+							className={"Typography_caption Typography_color-textSecondary Typography_lineClamp-1 Typography_lineClamp"}>
+							<pre>{type}  </pre>
+						</p>
 						<p className={"Typography_caption Typography_color-textSecondary flex items-center"}>{rate}
-							<svg className="SvgIcon_root SvgIcon_fontSize-inherit" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+							<svg className="SvgIcon_root SvgIcon_fontSize-inherit" focusable="false" viewBox="0 0 24 24"
+							     aria-hidden="true">
+								<path
+									d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
 							</svg>
 						</p>
 					</div>
@@ -30,7 +33,7 @@ const MangaGrid = ({key, link, img, type, rate, title}) => {
 			</Link>
 		</div>
 	);
-};
+}
 
 const Catalog = () => {
 	const [mangaList, setMangaList] = useState([]);
@@ -45,8 +48,7 @@ const Catalog = () => {
 			setMangaList(
 				mangaData.manga.map((manga) => (
 					<MangaGrid
-						key={manga.id}
-						link={manga.link}
+						id={manga.id}
 						img={manga.img}
 						type={manga.type}
 						rate={manga.rate}
@@ -163,7 +165,7 @@ const Catalog = () => {
 	};
 
 	return (
-		<div className={"Catalog slim"}>
+		<div className={"SharedFlex slim"}>
 			<div className={"Catalog_container grid-container"}>
 				<div className={"Catalog_headerLeft"}>
 					<h2 className={"Typography_h1"}>Catalog</h2>

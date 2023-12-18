@@ -8,10 +8,10 @@ import Catalog from "./pages/Catalog";
 import TopManga from "./pages/TopManga";
 import Bookmarks from "./pages/Bookmarks";
 import TermsOfUse from "./pages/footer_pages/Terms-of-use";
+import Manga from "./pages/Manga";
+import {mangaData} from "./data/manga";
 
-const Omni = () => {
-	return <h1>Omni</h1>
-}
+const manga = mangaData.manga
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -20,7 +20,9 @@ const router = createBrowserRouter(
 			<Route path={"manga"} element={<Catalog />} />
 			<Route path={"manga/top"} element={<TopManga />} />
 			<Route path={"user/bookmarks"} element={<Bookmarks />} />
-			<Route path={"omni"} element={<Omni />} />
+			{manga.map(manga => (
+				<Route path={`manga/${manga.id}`} element={<Manga id={manga.id}/>} />
+			))}
 			<Route path={"footer_template"} element={<TermsOfUse />} />
 		</Route>
 	)

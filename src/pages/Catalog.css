@@ -1,32 +1,3 @@
-div.Catalog {
-	width: 100%;
-	flex: 1;
-}
-
-@media (min-width: 1024px) {
-	div.Catalog {
-		max-width: calc(1600px + (100vw/64*7)*2);
-		padding-left: calc(100vw/64*7);
-		padding-right: calc(100vw/64*7);
-	}
-}
-
-@media (min-width: 1440px) {
-	div.Catalog {
-		max-width: calc(1600px + (100vw/72*9)*2);
-		padding-left: calc(100vw/72*9);
-		padding-right: calc(100vw/72*9);
-	}
-}
-
-@media (min-width: 1440px) {
-	.slim.Catalog {
-		max-width: calc(1440px + (100vw/72*2)*2);
-		padding-left: calc(100vw/72*7);
-		padding-right: calc(100vw/72*7);
-	}
-}
-
 .Catalog_header {
 	margin: 16px 0 8px;
 	padding: 0 8px;

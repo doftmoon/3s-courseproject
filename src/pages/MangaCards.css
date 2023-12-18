@@ -1,0 +1,10 @@
+.Button_fullWidth {
+	width: 100%;
+}
+
+.Buttons.Buttons_container {
+	padding: 8px 4px;
+	border-radius: 16px;
+	margin-bottom: 16px;
+}
+
