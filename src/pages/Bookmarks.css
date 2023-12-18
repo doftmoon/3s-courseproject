@@ -15,3 +15,10 @@
 div.Library_grid {
 	padding: 0 4px;
 }
+
+.Library_card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 6px 10px 10px;
+}

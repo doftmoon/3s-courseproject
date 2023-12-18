@@ -3,12 +3,12 @@ import "./Home.css"
 import {mangaData} from "../data/manga";
 import {Link, NavLink} from "react-router-dom";
 
-const MangaGrid = ({key, link, img, type, rate, likes, views, title, year}) => {
+const MangaGrid = ({key, id, img, type, rate, likes, views, title, year}) => {
 	const imgURL = `url(/images/${img})`
 
 	return (
 		<div className={"Home_gridItem grid-item"}>
-			<Link className={"Horizontal_card"} to={`manga/${link}`}>
+			<Link className={"Horizontal_card"} to={`manga/${id}`}>
 				<div className={"Image_container Horizontal_cover Image_imagePlaceholder"}>
 					<div className={"Image_image Image_imgStatic Image_imgFluid"} style={{backgroundImage: imgURL}}></div>
 				</div>
@@ -48,7 +48,7 @@ const Home = () => {
 	const mangaList = mangaData.manga.map((manga, index) => (
 		<MangaGrid
 			key={index}
-			link={manga.id}
+			id={manga.id}
 			img={manga.img}
 			type={manga.type}
 			rate={manga.rate}

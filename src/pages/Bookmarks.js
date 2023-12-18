@@ -20,7 +20,7 @@ export default function Bookmarks() {
 					</button>
 				</div>
 			</div>
-			<div className={"Grid_grid Library_grid"}>
+			<div className={"Home_gridContainer Home_gridContainer2 grid-container px-2 Home_grid"}>
 				{bookmarks.length === 0 ? (
 					<p>No bookmarks yet.</p>
 				) : (

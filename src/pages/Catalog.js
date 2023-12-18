@@ -95,8 +95,7 @@ const Catalog = () => {
 			setMangaList(
 				filteredMangaList.map((manga) => (
 					<MangaGrid
-						key={manga.id}
-						link={manga.link}
+						id={manga.id}
 						img={manga.img}
 						type={manga.type}
 						rate={manga.rate}
